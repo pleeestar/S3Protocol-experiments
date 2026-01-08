@@ -1,0 +1,22 @@
+services:
+  controller:
+    build: ./controller
+    depends_on:
+      - node1
+      - node2
+      - node3
+    volumes:
+      - ./analysis:/analysis
+
+  node1:
+    build: ./node
+    environment:
+      - SEED=1
+  node2:
+    build: ./node
+    environment:
+      - SEED=2
+  node3:
+    build: ./node
+    environment:
+      - SEED=3

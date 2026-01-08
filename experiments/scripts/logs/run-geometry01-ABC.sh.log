@@ -1,0 +1,30 @@
+=== [1] Project bootstrap ===
+=== [2] Build docker image ===
+[+] Building 2.3s (11/11) FINISHED                                                                                                           docker:colima
+ => [internal] load build definition from Dockerfile                                                                                                  0.0s
+ => => transferring dockerfile: 245B                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim                                                                                   0.0s
+ => [internal] load .dockerignore                                                                                                                     0.0s
+ => => transferring context: 2B                                                                                                                       0.0s
+ => [1/6] FROM docker.io/library/python:3.11-slim@sha256:1dd3dca85e22886e44fcad1bb7ccab6691dfa83db52214cf9e20696e095f3e36                             0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:1dd3dca85e22886e44fcad1bb7ccab6691dfa83db52214cf9e20696e095f3e36                             0.0s
+ => [internal] load build context                                                                                                                     0.0s
+ => => transferring context: 1.62kB                                                                                                                   0.0s
+ => CACHED [2/6] WORKDIR /app                                                                                                                         0.0s
+ => CACHED [3/6] COPY docker/requirements.txt .                                                                                                       0.0s
+ => CACHED [4/6] RUN pip install --no-cache-dir -r requirements.txt                                                                                   0.0s
+ => [5/6] COPY src/ src/                                                                                                                              0.0s
+ => [6/6] COPY configs/ configs/                                                                                                                      0.0s
+ => exporting to image                                                                                                                                2.3s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:9cac26d9e846a143f2146dce96034c7bc73c2d4d81298d06b95884e6d9b5e6b4                                                     0.0s
+ => => exporting config sha256:0d8e9737878adef7de84d77c40db7f6fee0f5c1c166603aa74d3cb0e0c49b1e3                                                       0.0s
+ => => exporting attestation manifest sha256:e18391997b504baf740e7ce04c4e02f580f1b75e7886eeb900b7eeb9cf9ba76e                                         0.0s
+ => => exporting manifest list sha256:c448748a7e375d3ebe27690d57a73a0f023300f726fff4697d2743a4fa037fdb                                                0.0s
+ => => naming to docker.io/library/belief-exp:latest                                                                                                  0.0s
+ => => unpacking to docker.io/library/belief-exp:latest                                                                                               2.2s
+=== [3] Run experiments A/B/C ===
+[DONE] expA
+[DONE] expB
+[DONE] expC
+=== ALL EXPERIMENTS FINISHED ===

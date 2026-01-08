@@ -1,0 +1,1303 @@
+== create project geometry03 ==
+== docker compose up ==
+[+] Building 0.4s (28/28) FINISHED
+ => [internal] load local bake definitions                                                                                                            0.0s
+ => => reading from stdin 3.38kB                                                                                                                      0.0s
+ => [node3 internal] load build definition from Dockerfile                                                                                            0.0s
+ => => transferring dockerfile: 229B                                                                                                                  0.0s
+ => [controller internal] load build definition from Dockerfile                                                                                       0.0s
+ => => transferring dockerfile: 190B                                                                                                                  0.0s
+ => [controller internal] load metadata for docker.io/library/python:3.11-slim                                                                        0.0s
+ => [node3 internal] load .dockerignore                                                                                                               0.0s
+ => => transferring context: 2B                                                                                                                       0.0s
+ => [controller internal] load .dockerignore                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                       0.0s
+ => [controller 1/5] FROM docker.io/library/python:3.11-slim@sha256:1dd3dca85e22886e44fcad1bb7ccab6691dfa83db52214cf9e20696e095f3e36                  0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:1dd3dca85e22886e44fcad1bb7ccab6691dfa83db52214cf9e20696e095f3e36                             0.0s
+ => [controller internal] load build context                                                                                                          0.0s
+ => => transferring context: 1.96kB                                                                                                                   0.0s
+ => [node1 internal] load build context                                                                                                               0.0s
+ => => transferring context: 1.94kB                                                                                                                   0.0s
+ => CACHED [node5 2/5] WORKDIR /app                                                                                                                   0.0s
+ => CACHED [controller 3/5] COPY requirements.txt .                                                                                                   0.0s
+ => CACHED [controller 4/5] RUN pip install --no-cache-dir -r requirements.txt                                                                        0.0s
+ => CACHED [controller 5/5] COPY main.py .                                                                                                            0.0s
+ => CACHED [node5 3/5] COPY requirements.txt .                                                                                                        0.0s
+ => CACHED [node5 4/5] RUN pip install --no-cache-dir -r requirements.txt                                                                             0.0s
+ => CACHED [node5 5/5] COPY app.py .                                                                                                                  0.0s
+ => [node3] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:78eabf78db9ac36fa0beddf56a667d72a4ce15139f8c4830705ed89e11317e67                                                     0.0s
+ => => exporting config sha256:f69d1885bddb43261d821a14533efd79fc8d49dec68a70a88c557b617d9a03ad                                                       0.0s
+ => => exporting attestation manifest sha256:4e5a440a5001f2ecc22bc8b1847a5f7c8dbb4dee4cd82e2bf2d32f7ccb1adb00                                         0.0s
+ => => exporting manifest list sha256:4fd3ffc26462c15e9912a5162fe92e7e4ea1b9a61651b83132cbeb91d8a59978                                                0.0s
+ => => naming to docker.io/library/geometry03-node3:latest                                                                                            0.0s
+ => => unpacking to docker.io/library/geometry03-node3:latest                                                                                         0.0s
+ => [controller] exporting to image                                                                                                                   0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:72c7f211d6fcf87ce03906d2cb63b45214b42ba704750306ea669f2211fcfcf5                                                     0.0s
+ => => exporting config sha256:761e60c73d47b98737445796a58b8b4f4b140be7b6dd2d3e5c1e120ca544dd96                                                       0.0s
+ => => exporting attestation manifest sha256:079ffca7fbc011084b3c7da452926ccde28f8f3e849ba87fc78f1cb2d3734d3c                                         0.0s
+ => => exporting manifest list sha256:0bfd6dd75c61c23de0ede6c626928971f551c2d3c8cf1e8141d3d3b8451f339f                                                0.0s
+ => => naming to docker.io/library/geometry03-controller:latest                                                                                       0.0s
+ => => unpacking to docker.io/library/geometry03-controller:latest                                                                                    0.0s
+ => [node2] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:4bfe947b8e8c39fa5049e5acfbf5f082ae600bd8bc81764686e4ab96584e3943                                                     0.0s
+ => => exporting config sha256:f2dbaa58be86f44e03d19a6eba0f6cfb846aa439acbf41dc3ca3121210a9505f                                                       0.0s
+ => => exporting attestation manifest sha256:30156b39e1439de01d8a9fe75b1d0d7b1fb303715c04fcf2b293257cdf6960fa                                         0.0s
+ => => exporting manifest list sha256:2caf0a6ddea18d9c4952130f43c753aa1939fb2740153769a05ecc85ede1b222                                                0.0s
+ => => naming to docker.io/library/geometry03-node2:latest                                                                                            0.0s
+ => => unpacking to docker.io/library/geometry03-node2:latest                                                                                         0.0s
+ => [node1] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:e06163a136b9c811219b2586f17141e9f310560682239bb7f35eef2cf8508bf3                                                     0.0s
+ => => exporting config sha256:772ef0a95432a4ac02ed9f2449cf0a2b5585ce6c0ce83f651783fc2d86a8962f                                                       0.0s
+ => => exporting attestation manifest sha256:3a6eb10f01bcdad9ae96242c7b4db023d05044a8318a492905921673fa2b2a75                                         0.0s
+ => => exporting manifest list sha256:fb4b409840c10829cb57239d8fa00f0f997c1e421ded97fdca3590f4bb20d5b0                                                0.0s
+ => => naming to docker.io/library/geometry03-node1:latest                                                                                            0.0s
+ => => unpacking to docker.io/library/geometry03-node1:latest                                                                                         0.0s
+ => [node5] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:dbed0c28a558d21b8a7ba2929aa715dd5a5b8318766503f4ae363d3e01d8485a                                                     0.0s
+ => => exporting config sha256:78093ca3e32f489ceb593925b8f46dd709724fb378d03fed952a74a17c3d521a                                                       0.0s
+ => => exporting attestation manifest sha256:c6455903aabc9e67224a86e7fcdfc5b5b82f4e314df48a240898ee8fd04e6bc9                                         0.0s
+ => => exporting manifest list sha256:4de78ebe2b44309ad47529cabf62c5a4796bc249f5f3368c6ce4cd7072b0328d                                                0.0s
+ => => naming to docker.io/library/geometry03-node5:latest                                                                                            0.0s
+ => => unpacking to docker.io/library/geometry03-node5:latest                                                                                         0.0s
+ => [node4] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:19af71d8cd5f54f49b8bdaea4a261d4138c5539eee519e4e3834b13dd4c628ad                                                     0.0s
+ => => exporting config sha256:e4ac91175e4508664d7ee622d5455201806448d7db35de4d7ec964b27a4a438c                                                       0.0s
+ => => exporting attestation manifest sha256:dc6068d211acf3a17172408ee635023620942bdac548eb2dcb9b2b0da1f2de1c                                         0.0s
+ => => exporting manifest list sha256:ca8828acab41dab5f0f92b828d6dd724472f96f003f61b71b38ba352579e3f85                                                0.0s
+ => => naming to docker.io/library/geometry03-node4:latest                                                                                            0.0s
+ => => unpacking to docker.io/library/geometry03-node4:latest                                                                                         0.0s
+ => [node2] resolving provenance for metadata file                                                                                                    0.0s
+ => [node3] resolving provenance for metadata file                                                                                                    0.0s
+ => [controller] resolving provenance for metadata file                                                                                               0.0s
+ => [node5] resolving provenance for metadata file                                                                                                    0.0s
+ => [node4] resolving provenance for metadata file                                                                                                    0.0s
+ => [node1] resolving provenance for metadata file                                                                                                    0.0s
+[+] Running 13/13
+ ✔ geometry03-node3                   Built                                                                                                           0.0s
+ ✔ geometry03-node4                   Built                                                                                                           0.0s
+ ✔ geometry03-node5                   Built                                                                                                           0.0s
+ ✔ geometry03-controller              Built                                                                                                           0.0s
+ ✔ geometry03-node1                   Built                                                                                                           0.0s
+ ✔ geometry03-node2                   Built                                                                                                           0.0s
+ ✔ Network geometry03_default         Created                                                                                                         0.0s
+ ✔ Container geometry03-node1-1       Created                                                                                                         0.0s
+ ✔ Container geometry03-node5-1       Created                                                                                                         0.0s
+ ✔ Container geometry03-node3-1       Created                                                                                                         0.0s
+ ✔ Container geometry03-node4-1       Created                                                                                                         0.0s
+ ✔ Container geometry03-node2-1       Created                                                                                                         0.0s
+ ✔ Container geometry03-controller-1  Created                                                                                                         0.0s
+Attaching to controller-1, node1-1, node2-1, node3-1, node4-1, node5-1
+node3-1  | INFO:     Started server process [1]
+node2-1  | INFO:     Started server process [1]
+node2-1  | INFO:     Waiting for application startup.
+node3-1  | INFO:     Waiting for application startup.
+node2-1  | INFO:     Application startup complete.
+node3-1  | INFO:     Application startup complete.
+node3-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node2-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node1-1  | INFO:     Started server process [1]
+node1-1  | INFO:     Waiting for application startup.
+node1-1  | INFO:     Application startup complete.
+node1-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node5-1  | INFO:     Started server process [1]
+node5-1  | INFO:     Waiting for application startup.
+node5-1  | INFO:     Application startup complete.
+node5-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node4-1  | INFO:     Started server process [1]
+node4-1  | INFO:     Waiting for application startup.
+node4-1  | INFO:     Application startup complete.
+node4-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+controller-1  | Waiting for nodes...
+node1-1       | INFO:     172.25.0.7:58306 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50916 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53018 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41910 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59028 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58308 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50918 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53026 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41916 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59042 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58320 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50934 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53038 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41920 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59048 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58326 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50948 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53050 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41932 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59058 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58338 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50956 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53064 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41942 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59074 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58342 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50972 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53080 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41950 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59090 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58352 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50986 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53090 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41956 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59104 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58354 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:50996 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53104 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41970 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59114 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58364 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51008 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53108 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41984 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59116 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58368 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51016 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53114 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:41998 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59122 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58370 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51020 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53118 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42008 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59130 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58372 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51024 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53134 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42014 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59142 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58386 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51028 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53144 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42030 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59156 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58390 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51042 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53146 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42046 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59160 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58402 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51044 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53160 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42054 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59176 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58418 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51052 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53172 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42066 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59182 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58434 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51064 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53180 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42074 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59186 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58442 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51080 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53182 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42084 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59196 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58452 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51096 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53188 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42094 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59200 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58462 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51100 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53192 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42108 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59206 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58464 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51104 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53206 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42110 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59214 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58466 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51108 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53220 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42112 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59216 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58476 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51120 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53226 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42114 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59222 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58484 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51136 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53242 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42122 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59238 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58486 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51140 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53254 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42130 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59246 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58490 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51146 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53260 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42134 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59256 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58504 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51150 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53264 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42148 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59260 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58512 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51154 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53266 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42160 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59276 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58518 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51170 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53278 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42172 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59280 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58530 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51180 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53290 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42180 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59286 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58540 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51196 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53300 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42186 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59294 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58556 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51210 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53316 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42198 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59306 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58562 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51226 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53326 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42208 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59320 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58564 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51232 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53330 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42222 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59326 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58568 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51236 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53338 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42236 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59340 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58576 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51238 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53354 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42250 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59354 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58592 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51246 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53358 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42252 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59366 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58600 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51248 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53360 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42258 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59380 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58604 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51260 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53362 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42274 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59394 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58608 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51268 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53364 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42286 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59396 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58618 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51270 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53368 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42290 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59398 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58632 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51278 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53370 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42302 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59406 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58634 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51280 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53380 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42314 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59414 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58638 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51292 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53392 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42318 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59430 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58654 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51304 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53402 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42328 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59444 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58658 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51318 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53412 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42338 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59454 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58664 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51330 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53424 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42352 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59464 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58676 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51332 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53434 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42364 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59480 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58678 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51344 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53436 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42366 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59496 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58680 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51350 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53450 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42370 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59506 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58692 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51362 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53452 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42380 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59512 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58706 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51366 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53458 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42396 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59522 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58722 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51376 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53466 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42400 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59528 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58734 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51388 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53480 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42410 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59532 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58740 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51392 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53490 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42426 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59548 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58752 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51400 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53502 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42442 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59552 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58756 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51402 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53508 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42448 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59564 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58764 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51410 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53514 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42458 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59568 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58778 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51422 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53516 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42472 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59582 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58782 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51438 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53522 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42476 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59590 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58788 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51440 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53536 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42490 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59604 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58804 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51446 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53550 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42498 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59610 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58820 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51458 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53562 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42512 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59624 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58828 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51468 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53576 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42514 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59634 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58838 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51472 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53586 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42522 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59650 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58852 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51486 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53602 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42528 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59664 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58866 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51498 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53610 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42542 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59674 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58882 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51506 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53626 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42546 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59684 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58896 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51522 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53632 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42550 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59700 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58908 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51526 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53642 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42558 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59708 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58916 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51534 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53646 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42574 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59718 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58922 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51544 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53654 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42584 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59724 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58934 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51558 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53664 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42600 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59730 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58948 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51564 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53676 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42612 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59742 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58952 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51574 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53680 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42622 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59744 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58956 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51586 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53682 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42636 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59760 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58958 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51588 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53690 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42646 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59774 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58964 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51596 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53700 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42656 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59778 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58966 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51602 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53704 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42666 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59794 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58978 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51616 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53716 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42682 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59802 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58984 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51626 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53728 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42692 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59810 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:58992 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51632 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53740 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42696 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59812 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59002 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51638 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53742 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42702 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59822 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59004 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51650 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53758 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42706 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59824 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59018 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51658 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53774 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42720 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59828 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59020 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51674 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53778 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42726 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59840 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59036 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51690 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53786 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42734 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59842 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59052 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51694 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53796 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42748 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59848 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59056 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51698 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53800 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42758 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59864 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59062 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51708 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53808 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42770 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59874 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59064 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51722 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53816 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42772 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59888 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59076 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51732 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53818 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42780 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59898 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59088 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51740 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53830 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42782 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59908 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59102 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51756 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53836 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42786 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59922 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59118 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51758 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53840 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42796 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59936 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59120 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51762 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53842 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42808 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59948 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59124 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51772 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53850 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42816 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59958 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59136 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51784 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53856 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42832 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59970 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59146 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51794 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53858 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42846 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59986 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59158 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51804 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53862 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42860 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59988 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:59162 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:51818 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:53872 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:42868 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:59990 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36772 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41336 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41542 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49884 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56888 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36782 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41340 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41546 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49900 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56890 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36786 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41346 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41554 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49908 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56904 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36800 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41356 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41566 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49922 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56918 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36816 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41362 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41568 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49930 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56922 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36824 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41376 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41578 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49938 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56924 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36834 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41384 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41588 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49946 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56934 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36836 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41392 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41602 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49948 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56946 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36846 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41406 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41618 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49960 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56948 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36858 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41418 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41626 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49962 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56956 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36860 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41424 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41642 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49964 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56972 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36876 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41436 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41652 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49978 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56974 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36892 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41444 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41668 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:49992 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56986 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36902 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41452 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41674 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50000 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:56988 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36908 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41462 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41680 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50002 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57004 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36916 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41466 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41682 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50004 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57016 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36926 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41480 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41698 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50006 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57030 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36940 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41494 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41700 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50012 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57040 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36954 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41498 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41712 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50018 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57042 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36970 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41502 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41716 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50022 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57044 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36974 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41518 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41718 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50024 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57056 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36978 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41522 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41720 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50028 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57058 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36992 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41538 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41724 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50040 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57060 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36994 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41546 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41740 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50054 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57072 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:36996 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41562 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41754 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50070 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57086 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37006 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41568 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41762 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50076 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57088 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37018 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41576 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41774 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50086 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57098 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37020 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41582 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41790 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50100 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57108 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37026 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41586 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41800 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50112 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57118 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37028 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41594 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41816 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50122 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57126 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37034 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41604 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41826 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50128 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57130 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37038 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41606 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41834 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50144 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57134 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37050 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41612 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41850 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50160 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57150 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37062 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41622 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41852 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50176 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57158 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37078 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41630 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41854 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50188 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57168 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37090 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41636 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41858 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50192 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57182 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37098 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41644 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41866 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50208 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57184 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37102 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41658 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41882 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50224 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57192 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37108 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41668 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41894 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50238 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57208 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37112 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41676 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41896 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50244 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57216 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37124 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41692 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41902 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50254 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57232 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37132 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41694 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41918 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50266 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57242 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37134 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41700 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41934 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50276 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57248 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37136 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41712 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41942 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50292 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57260 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37148 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41724 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41948 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50304 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57262 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37158 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41726 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41950 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50312 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57266 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37164 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41728 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41964 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50324 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57272 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37172 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41744 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41972 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50326 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57286 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37186 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41756 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41974 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50338 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57292 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37202 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41758 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41988 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50342 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57294 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37210 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41768 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41996 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50354 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57300 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37212 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41774 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:41998 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50370 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57316 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37222 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41776 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42012 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50378 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57324 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37226 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41786 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42022 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50380 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57328 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37230 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41800 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42024 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50384 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57334 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37232 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41810 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42026 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50386 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57342 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37234 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41826 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42030 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50400 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57344 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37246 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41838 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42032 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50402 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57348 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37248 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41842 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42046 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50406 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57364 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37260 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41844 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42062 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50410 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57378 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37270 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41846 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42072 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50420 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57384 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37284 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41854 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42084 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50430 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57386 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37290 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41864 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42092 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50444 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57400 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37292 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41866 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42104 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50456 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57410 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37298 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41882 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42120 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50468 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57420 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37310 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41894 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42124 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50472 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57426 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37316 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41904 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42136 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50478 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57442 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37322 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41920 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42150 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50480 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57458 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37330 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41922 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42158 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50484 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57470 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37344 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41924 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42174 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50498 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57482 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37352 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41934 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42178 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50504 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57490 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37362 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41938 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42182 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50506 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57502 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37364 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41952 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42196 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50508 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57514 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37380 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41954 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42206 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50524 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57526 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37384 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41962 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42210 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50530 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57538 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37400 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41964 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42216 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50534 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57548 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37412 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41968 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42232 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50546 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57558 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37428 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41974 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42238 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50562 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57560 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37430 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41988 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42246 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50576 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57564 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37432 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:41996 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42258 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50586 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57576 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37436 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42006 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42266 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50588 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57588 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37448 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42008 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42282 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50590 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57602 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37458 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42020 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42292 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50606 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57616 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37462 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42026 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42296 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50610 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57632 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37472 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42038 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42304 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50614 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57636 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37476 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42052 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42306 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50624 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57650 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37484 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42058 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42314 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50632 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57666 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37490 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42060 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42326 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50636 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57668 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37496 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42074 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42332 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50644 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57682 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37512 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42084 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42336 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50648 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57692 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37526 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42094 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42350 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50660 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57700 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37534 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42096 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42358 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50672 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57714 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37542 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42100 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42366 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50680 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57716 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37558 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42116 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42376 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50690 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57724 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37564 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42124 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42386 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50700 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57726 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37578 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42130 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42392 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50716 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57738 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37586 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42140 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42398 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50728 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57748 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37594 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42152 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42402 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50738 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57762 - "POST /tick HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37604 - "GET /state HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42166 - "GET /state HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42414 - "GET /state HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50748 - "GET /state HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57770 - "GET /state HTTP/1.1" 200 OK
+node1-1       | INFO:     172.25.0.7:37618 - "POST /tick HTTP/1.1" 200 OK
+node2-1       | INFO:     172.25.0.7:42180 - "POST /tick HTTP/1.1" 200 OK
+node3-1       | INFO:     172.25.0.7:42430 - "POST /tick HTTP/1.1" 200 OK
+node4-1       | INFO:     172.25.0.7:50758 - "POST /tick HTTP/1.1" 200 OK
+node5-1       | INFO:     172.25.0.7:57786 - "POST /tick HTTP/1.1" 200 OK
+controller-1  | .Nodes ready.
+controller-1  | Starting Gossip for 100 steps with 5 nodes...
+controller-1  | Step 0/100 completed
+controller-1  | Step 10/100 completed
+controller-1  | Step 20/100 completed
+controller-1  | Step 30/100 completed
+controller-1  | Step 40/100 completed
+controller-1  | Step 50/100 completed
+controller-1  | Step 60/100 completed
+controller-1  | Step 70/100 completed
+controller-1  | Step 80/100 completed
+controller-1  | Step 90/100 completed
+controller-1  | Experiment completed.
+controller-1 exited with code 0
+Aborting on container exit...
+ Container geometry03-controller-1  Stopping
+ Container geometry03-controller-1  Stopped
+
+
+ Container geometry03-node3-1  Stopping
+ Container geometry03-node2-1  Stopping
+ Container geometry03-node5-1  Stopping
+ Container geometry03-node1-1  Stopping
+ Container geometry03-node4-1  Stopping
+
+
+
+
+
+
+node2-1       | INFO:     Shutting down
+node1-1       | INFO:     Shutting down
+node3-1       | INFO:     Shutting down
+node5-1       | INFO:     Shutting down
+node4-1       | INFO:     Shutting down
+
+
+node5-1       | INFO:     Waiting for application shutdown.
+node4-1       | INFO:     Waiting for application shutdown.
+
+
+node1-1       | INFO:     Waiting for application shutdown.
+node3-1       | INFO:     Waiting for application shutdown.
+
+
+node5-1       | INFO:     Application shutdown complete.
+
+node1-1       | INFO:     Application shutdown complete.
+
+node5-1       | INFO:     Finished server process [1]
+
+
+
+node3-1       | INFO:     Application shutdown complete.
+node4-1       | INFO:     Finished server process [1]
+node1-1       | INFO:     Finished server process [1]
+
+
+node3-1       | INFO:     Finished server process [1]
+node2-1       | INFO:     Waiting for application shutdown.
+node2-1       | INFO:     Application shutdown complete.
+node2-1       | INFO:     Finished server process [1]
+ Container geometry03-node1-1  Stopped
+node1-1 exited with code 0
+ Container geometry03-node3-1  Stopped
+node3-1 exited with code 0
+ Container geometry03-node5-1  Stopped
+node5-1 exited with code 0
+ Container geometry03-node4-1  Stopped
+node4-1 exited with code 0
+ Container geometry03-node2-1  Stopped
+node2-1 exited with code 0
+== analysis ==
+Collecting pandas
+  Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 3.5 MB/s eta 0:00:00
+Collecting matplotlib
+  Downloading matplotlib-3.10.8-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 kB 10.2 MB/s eta 0:00:00
+Collecting scikit-learn
+  Downloading scikit_learn-1.8.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (11 kB)
+Collecting umap-learn
+  Downloading umap_learn-0.5.9.post2-py3-none-any.whl.metadata (25 kB)
+Collecting numpy>=1.23.2 (from pandas)
+  Downloading numpy-2.4.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.61.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 15.5 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.4.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+Collecting packaging>=20.0 (from matplotlib)
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pillow>=8 (from matplotlib)
+  Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (8.8 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Downloading pyparsing-3.3.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting scipy>=1.10.0 (from scikit-learn)
+  Downloading scipy-1.16.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 17.6 MB/s eta 0:00:00
+Collecting joblib>=1.3.0 (from scikit-learn)
+  Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting threadpoolctl>=3.2.0 (from scikit-learn)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting numba>=0.51.2 (from umap-learn)
+  Downloading numba-0.63.1-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (2.9 kB)
+Collecting pynndescent>=0.5 (from umap-learn)
+  Downloading pynndescent-0.5.13-py3-none-any.whl.metadata (6.8 kB)
+Collecting tqdm (from umap-learn)
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 22.9 MB/s eta 0:00:00
+Collecting llvmlite<0.47,>=0.46.0dev0 (from numba>=0.51.2->umap-learn)
+  Downloading llvmlite-0.46.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (5.0 kB)
+Collecting numpy>=1.23.2 (from pandas)
+  Downloading numpy-2.3.5-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 23.4 MB/s eta 0:00:00
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (12.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 75.4 MB/s eta 0:00:00
+Downloading matplotlib-3.10.8-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 81.1 MB/s eta 0:00:00
+Downloading scikit_learn-1.8.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (8.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 75.6 MB/s eta 0:00:00
+Downloading umap_learn-0.5.9.post2-py3-none-any.whl (90 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.1/90.1 kB 22.0 MB/s eta 0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (329 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 329.2/329.2 kB 50.4 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.61.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 63.7 MB/s eta 0:00:00
+Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 40.2 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 69.8 MB/s eta 0:00:00
+Downloading numba-0.63.1-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 77.1 MB/s eta 0:00:00
+Downloading numpy-2.3.5-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (14.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.6/14.6 MB 74.3 MB/s eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 29.2 MB/s eta 0:00:00
+Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 72.4 MB/s eta 0:00:00
+Downloading pynndescent-0.5.13-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.9/56.9 kB 23.5 MB/s eta 0:00:00
+Downloading pyparsing-3.3.1-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.8/121.8 kB 35.1 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 47.3 MB/s eta 0:00:00
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 44.4 MB/s eta 0:00:00
+Downloading scipy-1.16.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (33.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.6/33.6 MB 50.5 MB/s eta 0:00:00
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.5/348.5 kB 43.5 MB/s eta 0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 26.7 MB/s eta 0:00:00
+Downloading llvmlite-0.46.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (55.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 MB 51.1 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: pytz, tzdata, tqdm, threadpoolctl, six, pyparsing, pillow, packaging, numpy, llvmlite, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, numba, contourpy, scikit-learn, pandas, matplotlib, pynndescent, umap-learn
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.61.1 joblib-1.5.3 kiwisolver-1.4.9 llvmlite-0.46.0 matplotlib-3.10.8 numba-0.63.1 numpy-2.3.5 packaging-25.0 pandas-2.3.3 pillow-12.1.0 pynndescent-0.5.13 pyparsing-3.3.1 python-dateutil-2.9.0.post0 pytz-2025.2 scikit-learn-1.8.0 scipy-1.16.3 six-1.17.0 threadpoolctl-3.6.0 tqdm-4.67.1 tzdata-2025.3 umap-learn-0.5.9.post2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+Loading data...
+Final Step Silhouette Score Estimate: 0.13234851684762292
+Analysis Done.
+Generated: trajectory_pca.png, personality_drift.png
+DONE

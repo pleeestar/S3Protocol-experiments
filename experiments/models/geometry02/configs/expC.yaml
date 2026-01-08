@@ -1,0 +1,4 @@
+name: expC
+graph: random
+projection: gossip
+seed: 42

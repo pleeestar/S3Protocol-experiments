@@ -1,0 +1,423 @@
+./01_entropy/run-entropy02.sh
+== create project entropy02 ==
+== docker compose up ==
+[+] Building 0.3s (24/24) FINISHED
+ => [internal] load local bake definitions                                                                                                            0.0s
+ => => reading from stdin 2.28kB                                                                                                                      0.0s
+ => [node1 internal] load build definition from Dockerfile                                                                                            0.0s
+ => => transferring dockerfile: 209B                                                                                                                  0.0s
+ => [controller internal] load build definition from Dockerfile                                                                                       0.0s
+ => => transferring dockerfile: 170B                                                                                                                  0.0s
+ => [node2 internal] load metadata for docker.io/library/python:3.11                                                                                  0.0s
+ => [node1 internal] load .dockerignore                                                                                                               0.0s
+ => => transferring context: 2B                                                                                                                       0.0s
+ => [controller internal] load .dockerignore                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                       0.0s
+ => [node2 1/5] FROM docker.io/library/python:3.11@sha256:a59271513fb0937fe3aac14c5178ab68b8125c39f7c503628a6ac9e9906c45cf                            0.0s
+ => => resolve docker.io/library/python:3.11@sha256:a59271513fb0937fe3aac14c5178ab68b8125c39f7c503628a6ac9e9906c45cf                                  0.0s
+ => [controller internal] load build context                                                                                                          0.0s
+ => => transferring context: 1.04kB                                                                                                                   0.0s
+ => [node1 internal] load build context                                                                                                               0.0s
+ => => transferring context: 646B                                                                                                                     0.0s
+ => CACHED [node2 2/5] WORKDIR /app                                                                                                                   0.0s
+ => CACHED [node2 3/5] COPY requirements.txt .                                                                                                        0.0s
+ => CACHED [node2 4/5] RUN pip install -r requirements.txt                                                                                            0.0s
+ => CACHED [node2 5/5] COPY app.py .                                                                                                                  0.0s
+ => CACHED [controller 3/5] COPY requirements.txt .                                                                                                   0.0s
+ => CACHED [controller 4/5] RUN pip install -r requirements.txt                                                                                       0.0s
+ => CACHED [controller 5/5] COPY main.py .                                                                                                            0.0s
+ => [node2] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:4ffb7c1304c9b0db09fed033449adab9bf024c252bd69bc0c77d8c3e8583df9b                                                     0.0s
+ => => exporting config sha256:3e57b116b7fb5636c4c003a9d536228723ebd02d38fd71e82878860236cf0009                                                       0.0s
+ => => exporting attestation manifest sha256:82d4769ef7f471dbfdcf98130d2c56b993a9e18e54f86f4c3f673a1390ffc26b                                         0.0s
+ => => exporting manifest list sha256:5feaa7aff32ed840aef8ecf1ec66716aaafdba7b71e8eae0415384c8d3fb98db                                                0.0s
+ => => naming to docker.io/library/entropy02-node2:latest                                                                                             0.0s
+ => => unpacking to docker.io/library/entropy02-node2:latest                                                                                          0.0s
+ => [node1] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:bd39d6c5cc602b6c20b5cd3bf9f29c7a0e472f89ffc58bb883e7c665f850e6cc                                                     0.0s
+ => => exporting config sha256:66eccf7778dc793ff1e757c95a0caa4e844cb7f8934bea040e54890f53adf0e7                                                       0.0s
+ => => exporting attestation manifest sha256:b5a257cb8c3a6b839359614a812eca592a63697809febc7c25d3f708ffbd8418                                         0.0s
+ => => exporting manifest list sha256:e3aaa247c524ed62493eda3a98a0b706575cd2eac014b17293f23de1a5e13e6e                                                0.0s
+ => => naming to docker.io/library/entropy02-node1:latest                                                                                             0.0s
+ => => unpacking to docker.io/library/entropy02-node1:latest                                                                                          0.0s
+ => [node3] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:7a32f4c5067526ab4507cd200ddb6a651fcee393e7b6c0f4896ac22e48cbfa5e                                                     0.0s
+ => => exporting config sha256:bca5026efb435489684634f00c8e538f319bb23e04e5881bee1d9c16a7268663                                                       0.0s
+ => => exporting attestation manifest sha256:a34d4b6639470e6347cc0ffd2e31c8cd19011eb77586805edcd8d49ae25faf60                                         0.0s
+ => => exporting manifest list sha256:a69337ea8ec5056dfa2503b8f9eb33b0f047050fb91cd13e6233ef5c92e11c86                                                0.0s
+ => => naming to docker.io/library/entropy02-node3:latest                                                                                             0.0s
+ => => unpacking to docker.io/library/entropy02-node3:latest                                                                                          0.0s
+ => [controller] exporting to image                                                                                                                   0.1s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:0c37f45e0187977deacdedd05598ff4aa1e817686afb3377c4ad4ff4b21c6004                                                     0.0s
+ => => exporting config sha256:6ae52e4424ba7482c0ef1f26328af408bb938c29570b9deb7355f848f006908b                                                       0.0s
+ => => exporting attestation manifest sha256:8059698be79bec2f09971e13f99a407f8dd70ed54df9e7253c6d3543a958f841                                         0.0s
+ => => exporting manifest list sha256:b0ff9657a293c777b480b371577c77d29d8a53fe2a242c359ef24dd5e95561d1                                                0.0s
+ => => naming to docker.io/library/entropy02-controller:latest                                                                                        0.0s
+ => => unpacking to docker.io/library/entropy02-controller:latest                                                                                     0.0s
+ => [node2] resolving provenance for metadata file                                                                                                    0.0s
+ => [node3] resolving provenance for metadata file                                                                                                    0.0s
+ => [node1] resolving provenance for metadata file                                                                                                    0.0s
+ => [controller] resolving provenance for metadata file                                                                                               0.0s
+[+] Running 9/9
+ ✔ entropy02-node3                   Built                                                                                                            0.0s
+ ✔ entropy02-node1                   Built                                                                                                            0.0s
+ ✔ entropy02-node2                   Built                                                                                                            0.0s
+ ✔ entropy02-controller              Built                                                                                                            0.0s
+ ✔ Network entropy02_default         Created                                                                                                          0.0s
+ ✔ Container entropy02-node3-1       Created                                                                                                          0.0s
+ ✔ Container entropy02-node1-1       Created                                                                                                          0.0s
+ ✔ Container entropy02-node2-1       Created                                                                                                          0.0s
+ ✔ Container entropy02-controller-1  Created                                                                                                          0.0s
+Attaching to controller-1, node1-1, node2-1, node3-1
+node2-1  | INFO:     Started server process [1]
+node2-1  | INFO:     Waiting for application startup.
+node2-1  | INFO:     Application startup complete.
+node2-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node1-1  | INFO:     Started server process [1]
+node1-1  | INFO:     Waiting for application startup.
+node1-1  | INFO:     Application startup complete.
+node1-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node3-1  | INFO:     Started server process [1]
+node3-1  | INFO:     Waiting for application startup.
+node3-1  | INFO:     Application startup complete.
+node3-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node1-1  | INFO:     172.24.0.5:57994 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34758 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44822 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:57996 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34762 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44832 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58006 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34766 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44848 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58012 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34778 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44852 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58016 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34780 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44862 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58018 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34794 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44864 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58028 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34804 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44876 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58044 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34810 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44892 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58046 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34814 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44896 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58050 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34818 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44908 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58064 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34828 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44918 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58070 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34830 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44920 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58076 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34842 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44928 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58086 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34848 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44940 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58102 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34854 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44946 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58108 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34862 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44948 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58124 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34874 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44956 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58140 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34880 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44972 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58142 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34890 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44976 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58156 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34902 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44982 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58170 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34916 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:44998 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58172 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34930 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45006 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58178 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34946 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45016 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58182 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34948 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45022 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58186 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34950 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45030 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58202 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34962 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45040 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58208 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34972 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45050 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58212 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:34988 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45066 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58222 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35004 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45082 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58232 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35006 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45090 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58246 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35022 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45102 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58260 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35030 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45116 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58276 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35040 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45124 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58288 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35044 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45130 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58302 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35052 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45138 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58308 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35058 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45154 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58316 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35072 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45158 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58332 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35080 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45164 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58348 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35082 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45170 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58354 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35084 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45172 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58356 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35096 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45176 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58366 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35100 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45190 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58376 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35114 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45200 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58392 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35128 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45204 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58406 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35140 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45216 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58420 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35156 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:45230 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:58434 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:35158 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58244 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36490 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41666 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58250 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36504 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41676 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58266 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36520 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41692 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58272 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36522 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41696 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58284 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36536 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41712 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58294 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36538 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41718 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58296 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36542 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41722 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58300 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36556 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41726 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58314 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36568 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41732 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58328 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36572 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41744 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58342 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36578 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41750 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58354 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36592 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41752 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58358 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36596 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41758 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58366 - "GET /state HTTP/1.1" 200 OK
+node1-1  | INFO:     172.24.0.5:36606 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | INFO:     172.24.0.5:41768 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | INFO:     172.24.0.5:58380 - "POST /tick HTTP/1.1" 200 OK
+controller-1 exited with code 0
+Aborting on container exit...
+ Container entropy02-controller-1  Stopping
+ Container entropy02-controller-1  Stopped
+
+
+ Container entropy02-node3-1  Stopping
+ Container entropy02-node1-1  Stopping
+
+
+ Container entropy02-node2-1  Stopping
+node2-1       | INFO:     Shutting down
+node1-1       | INFO:     Shutting down
+
+
+
+node3-1       | INFO:     Shutting down
+
+
+node3-1       | INFO:     Waiting for application shutdown.
+node2-1       | INFO:     Waiting for application shutdown.
+node1-1       | INFO:     Waiting for application shutdown.
+
+
+
+
+node1-1       | INFO:     Application shutdown complete.
+node3-1       | INFO:     Application shutdown complete.
+
+
+node2-1       | INFO:     Application shutdown complete.
+
+node3-1       | INFO:     Finished server process [1]
+
+
+node2-1       | INFO:     Finished server process [1]
+node1-1       | INFO:     Finished server process [1]
+ Container entropy02-node3-1  Stopped
+node3-1 exited with code 0
+ Container entropy02-node1-1  Stopped
+node1-1 exited with code 0
+ Container entropy02-node2-1  Stopped
+node2-1 exited with code 0
+== analysis ==
+Collecting pandas
+  Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 3.4 MB/s eta 0:00:00
+Collecting matplotlib
+  Downloading matplotlib-3.10.8-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 kB 15.6 MB/s eta 0:00:00
+Collecting scikit-learn
+  Downloading scikit_learn-1.8.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (11 kB)
+Collecting umap-learn
+  Downloading umap_learn-0.5.9.post2-py3-none-any.whl.metadata (25 kB)
+Collecting numpy>=1.23.2 (from pandas)
+  Downloading numpy-2.4.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.61.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 16.7 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.4.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+Collecting packaging>=20.0 (from matplotlib)
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pillow>=8 (from matplotlib)
+  Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (8.8 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Downloading pyparsing-3.3.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting scipy>=1.10.0 (from scikit-learn)
+  Downloading scipy-1.16.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 19.2 MB/s eta 0:00:00
+Collecting joblib>=1.3.0 (from scikit-learn)
+  Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting threadpoolctl>=3.2.0 (from scikit-learn)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting numba>=0.51.2 (from umap-learn)
+  Downloading numba-0.63.1-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (2.9 kB)
+Collecting pynndescent>=0.5 (from umap-learn)
+  Downloading pynndescent-0.5.13-py3-none-any.whl.metadata (6.8 kB)
+Collecting tqdm (from umap-learn)
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 22.9 MB/s eta 0:00:00
+Collecting llvmlite<0.47,>=0.46.0dev0 (from numba>=0.51.2->umap-learn)
+  Downloading llvmlite-0.46.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (5.0 kB)
+Collecting numpy>=1.23.2 (from pandas)
+  Downloading numpy-2.3.5-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 25.1 MB/s eta 0:00:00
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (12.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 79.5 MB/s eta 0:00:00
+Downloading matplotlib-3.10.8-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 73.4 MB/s eta 0:00:00
+Downloading scikit_learn-1.8.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (8.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 79.7 MB/s eta 0:00:00
+Downloading umap_learn-0.5.9.post2-py3-none-any.whl (90 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.1/90.1 kB 26.8 MB/s eta 0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (329 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 329.2/329.2 kB 43.5 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.61.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 65.1 MB/s eta 0:00:00
+Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 39.1 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 68.0 MB/s eta 0:00:00
+Downloading numba-0.63.1-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 72.0 MB/s eta 0:00:00
+Downloading numpy-2.3.5-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (14.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.6/14.6 MB 79.4 MB/s eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 23.2 MB/s eta 0:00:00
+Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 73.2 MB/s eta 0:00:00
+Downloading pynndescent-0.5.13-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.9/56.9 kB 20.1 MB/s eta 0:00:00
+Downloading pyparsing-3.3.1-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.8/121.8 kB 28.4 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 45.4 MB/s eta 0:00:00
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 56.2 MB/s eta 0:00:00
+Downloading scipy-1.16.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (33.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.6/33.6 MB 51.4 MB/s eta 0:00:00
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.5/348.5 kB 45.3 MB/s eta 0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 29.2 MB/s eta 0:00:00
+Downloading llvmlite-0.46.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (55.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 MB 58.9 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: pytz, tzdata, tqdm, threadpoolctl, six, pyparsing, pillow, packaging, numpy, llvmlite, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, numba, contourpy, scikit-learn, pandas, matplotlib, pynndescent, umap-learn
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.61.1 joblib-1.5.3 kiwisolver-1.4.9 llvmlite-0.46.0 matplotlib-3.10.8 numba-0.63.1 numpy-2.3.5 packaging-25.0 pandas-2.3.3 pillow-12.1.0 pynndescent-0.5.13 pyparsing-3.3.1 python-dateutil-2.9.0.post0 pytz-2025.2 scikit-learn-1.8.0 scipy-1.16.3 six-1.17.0 threadpoolctl-3.6.0 tqdm-4.67.1 tzdata-2025.3 umap-learn-0.5.9.post2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+/usr/local/lib/python3.11/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+DONE
+Generated:
+ - analysis/belief_pca.png
+ - analysis/belief_umap.png

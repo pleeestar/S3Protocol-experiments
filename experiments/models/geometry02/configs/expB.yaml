@@ -1,0 +1,4 @@
+name: expB
+graph: random
+projection: identity
+seed: 42

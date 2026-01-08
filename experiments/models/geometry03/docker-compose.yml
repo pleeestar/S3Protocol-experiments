@@ -1,0 +1,57 @@
+services:
+  controller:
+    build: ./controller
+    depends_on:
+      - node1
+      - node2
+      - node3
+      - node4
+      - node5
+    environment:
+      - NODE_URLS=http://node1:8000,http://node2:8000,http://node3:8000,http://node4:8000,http://node5:8000
+      - STEPS=100
+      - DIM=8
+    volumes:
+      - ./analysis:/analysis
+
+
+  node1:
+    build: ./node
+    environment:
+      - NODE_ID=1
+      - DIM=8
+      - LR=0.05
+      - ALPHA=0.6
+
+  node2:
+    build: ./node
+    environment:
+      - NODE_ID=2
+      - DIM=8
+      - LR=0.05
+      - ALPHA=0.6
+
+  node3:
+    build: ./node
+    environment:
+      - NODE_ID=3
+      - DIM=8
+      - LR=0.05
+      - ALPHA=0.6
+
+  node4:
+    build: ./node
+    environment:
+      - NODE_ID=4
+      - DIM=8
+      - LR=0.05
+      - ALPHA=0.6
+
+  node5:
+    build: ./node
+    environment:
+      - NODE_ID=5
+      - DIM=8
+      - LR=0.05
+      - ALPHA=0.6
+

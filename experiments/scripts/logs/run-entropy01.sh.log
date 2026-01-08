@@ -1,0 +1,303 @@
+./01_entropy/run-entropy01.sh
+== create project ==
+== build & run ==
+[+] Building 0.2s (24/24) FINISHED
+ => [internal] load local bake definitions                                                                                                                 0.0s
+ => => reading from stdin 2.28kB                                                                                                                           0.0s
+ => [node1 internal] load build definition from Dockerfile                                                                                                 0.0s
+ => => transferring dockerfile: 209B                                                                                                                       0.0s
+ => [controller internal] load build definition from Dockerfile                                                                                            0.0s
+ => => transferring dockerfile: 170B                                                                                                                       0.0s
+ => [node3 internal] load metadata for docker.io/library/python:3.11                                                                                       0.0s
+ => [controller internal] load .dockerignore                                                                                                               0.0s
+ => => transferring context: 2B                                                                                                                            0.0s
+ => [node2 internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                            0.0s
+ => [node1 1/5] FROM docker.io/library/python:3.11@sha256:a59271513fb0937fe3aac14c5178ab68b8125c39f7c503628a6ac9e9906c45cf                                 0.0s
+ => => resolve docker.io/library/python:3.11@sha256:a59271513fb0937fe3aac14c5178ab68b8125c39f7c503628a6ac9e9906c45cf                                       0.0s
+ => [controller internal] load build context                                                                                                               0.0s
+ => => transferring context: 1.13kB                                                                                                                        0.0s
+ => [node3 internal] load build context                                                                                                                    0.0s
+ => => transferring context: 544B                                                                                                                          0.0s
+ => CACHED [controller 2/5] WORKDIR /app                                                                                                                   0.0s
+ => CACHED [node3 3/5] COPY requirements.txt .                                                                                                             0.0s
+ => CACHED [node3 4/5] RUN pip install -r requirements.txt                                                                                                 0.0s
+ => CACHED [node1 5/5] COPY app.py .                                                                                                                       0.0s
+ => CACHED [controller 3/5] COPY requirements.txt .                                                                                                        0.0s
+ => CACHED [controller 4/5] RUN pip install -r requirements.txt                                                                                            0.0s
+ => CACHED [controller 5/5] COPY main.py .                                                                                                                 0.0s
+ => [node2] exporting to image                                                                                                                             0.0s
+ => => exporting layers                                                                                                                                    0.0s
+ => => exporting manifest sha256:c453deb063d85e0cd409a4ef94ea50ceca3f6a21147c33d4041450417076aebc                                                          0.0s
+ => => exporting config sha256:d33168c4efdba8f739bae34f70416017bd9505ee21c1dc34ad46e9a782214ff4                                                            0.0s
+ => => exporting attestation manifest sha256:1d95ac6fa28964fca22abbde0642ea56c12eb4166b2da96a86847c0c73c400c7                                              0.0s
+ => => exporting manifest list sha256:4d267e934d22eb587c66128e2b25075d020317f9296617dbfe2448c94221f7e7                                                     0.0s
+ => => naming to docker.io/library/entropy01-node2:latest                                                                                                  0.0s
+ => => unpacking to docker.io/library/entropy01-node2:latest                                                                                               0.0s
+ => [node1] exporting to image                                                                                                                             0.1s
+ => => exporting layers                                                                                                                                    0.0s
+ => => exporting manifest sha256:bfaa28c0821528a60616104f43c28447ca15ed990c795d5b8f8e52351c6f9bc8                                                          0.0s
+ => => exporting config sha256:7217fd917894f8f4a79bc2f8ad743ce435affbf20faf2ae589223c1ba9c4f0c3                                                            0.0s
+ => => exporting attestation manifest sha256:793a33e94c3f72d2824b454e073a89d19ad594ad0e374eafeb4302de2b36f769                                              0.0s
+ => => exporting manifest list sha256:0541fc63cc203b8ea772e14c7594650fb586a68cf65d8da346caed4f238b3f61                                                     0.0s
+ => => naming to docker.io/library/entropy01-node1:latest                                                                                                  0.0s
+ => => unpacking to docker.io/library/entropy01-node1:latest                                                                                               0.0s
+ => [controller] exporting to image                                                                                                                        0.1s
+ => => exporting layers                                                                                                                                    0.0s
+ => => exporting manifest sha256:c1348da657ce30589c0332dd929fc3e62cced323a61b8ee2f21ad4b1a4e9828d                                                          0.0s
+ => => exporting config sha256:c9fde2ea742eaadaca8732740379d42d67cdf0ec616ae6a4dee019d3673a54ac                                                            0.0s
+ => => exporting attestation manifest sha256:d9c25a0b0955afc5c9965c2413452cf64fb179f206f6f783b9ec6b993fd60737                                              0.0s
+ => => exporting manifest list sha256:934915eb70de5504c6b0efc8bbc437de3ad926e278406d2da7a140b55613e11c                                                     0.0s
+ => => naming to docker.io/library/entropy01-controller:latest                                                                                             0.0s
+ => => unpacking to docker.io/library/entropy01-controller:latest                                                                                          0.0s
+ => [node3] exporting to image                                                                                                                             0.1s
+ => => exporting layers                                                                                                                                    0.0s
+ => => exporting manifest sha256:3ffa160ebd2f6a8b2c377eb4a79d03430cb51c072b31f85cbcb84458b38c8262                                                          0.0s
+ => => exporting config sha256:a905a4270b371d439679ae3724fcf5f6e85030d4bdd5a2353fde0b5e1392eaf7                                                            0.0s
+ => => exporting attestation manifest sha256:595e14622be142fd8b4416f728a0a50cd252d2c9033712739e461176efb4f506                                              0.0s
+ => => exporting manifest list sha256:d12ca3dc4fec23d13d39056be34342ce04b963064e8867949cc79d978ce19606                                                     0.0s
+ => => naming to docker.io/library/entropy01-node3:latest                                                                                                  0.0s
+ => => unpacking to docker.io/library/entropy01-node3:latest                                                                                               0.0s
+ => [node2] resolving provenance for metadata file                                                                                                         0.0s
+ => [node3] resolving provenance for metadata file                                                                                                         0.0s
+ => [controller] resolving provenance for metadata file                                                                                                    0.0s
+ => [node1] resolving provenance for metadata file                                                                                                         0.0s
+[+] Running 8/8
+ ✔ entropy01-node1                   Built                                                                                                                 0.0s
+ ✔ entropy01-node2                   Built                                                                                                                 0.0s
+ ✔ entropy01-node3                   Built                                                                                                                 0.0s
+ ✔ entropy01-controller              Built                                                                                                                 0.0s
+ ✔ Container entropy01-node2-1       Recreated                                                                                                             0.4s
+ ✔ Container entropy01-node3-1       Recreated                                                                                                             0.4s
+ ✔ Container entropy01-node1-1       Recreated                                                                                                             0.4s
+ ✔ Container entropy01-controller-1  Recreated                                                                                                             0.0s
+Attaching to controller-1, node1-1, node2-1, node3-1
+node2-1  | INFO:     Started server process [1]
+node2-1  | INFO:     Waiting for application startup.
+node2-1  | INFO:     Application startup complete.
+node2-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node1-1  | INFO:     Started server process [1]
+node1-1  | INFO:     Waiting for application startup.
+node1-1  | INFO:     Application startup complete.
+node1-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node3-1  | INFO:     Started server process [1]
+node3-1  | INFO:     Waiting for application startup.
+node3-1  | INFO:     Application startup complete.
+node3-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+node1-1  | INFO:     172.23.0.5:40328 - "GET /state HTTP/1.1" 200 OK
+node2-1  | INFO:     172.23.0.5:59734 - "GET /state HTTP/1.1" 200 OK
+node3-1  | INFO:     172.23.0.5:38952 - "GET /state HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.593 -> 0.584
+node1-1  | INFO:     172.23.0.5:40344 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.333 -> 0.459
+node2-1  | INFO:     172.23.0.5:59738 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.345 -> 0.447
+node3-1  | INFO:     172.23.0.5:38968 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.584 -> 0.570
+node1-1  | INFO:     172.23.0.5:40346 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.459 -> 0.514
+node2-1  | INFO:     172.23.0.5:59742 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.447 -> 0.508
+node3-1  | INFO:     172.23.0.5:38980 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.570 -> 0.564
+node1-1  | INFO:     172.23.0.5:40360 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.514 -> 0.539
+node2-1  | INFO:     172.23.0.5:59746 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.508 -> 0.536
+node3-1  | INFO:     172.23.0.5:38988 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.564 -> 0.561
+node1-1  | INFO:     172.23.0.5:40370 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.539 -> 0.550
+node2-1  | INFO:     172.23.0.5:59756 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.536 -> 0.549
+node3-1  | INFO:     172.23.0.5:39002 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.561 -> 0.560
+node1-1  | INFO:     172.23.0.5:40376 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.550 -> 0.555
+node2-1  | INFO:     172.23.0.5:59770 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.549 -> 0.554
+node3-1  | INFO:     172.23.0.5:39004 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.560 -> 0.559
+node1-1  | INFO:     172.23.0.5:40384 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.555 -> 0.557
+node2-1  | INFO:     172.23.0.5:59778 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.554 -> 0.557
+node3-1  | INFO:     172.23.0.5:39006 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40388 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.557 -> 0.558
+node2-1  | INFO:     172.23.0.5:59784 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.557 -> 0.558
+node3-1  | INFO:     172.23.0.5:39008 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40402 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.558 -> 0.559
+node2-1  | INFO:     172.23.0.5:59792 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.558 -> 0.559
+node3-1  | INFO:     172.23.0.5:39012 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40414 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59804 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39026 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40424 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59816 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39032 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40434 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59832 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39048 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40440 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59844 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39054 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40444 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59858 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39068 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40460 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59874 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39074 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40464 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59888 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39084 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40476 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59900 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39092 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40486 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59908 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39094 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40488 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59922 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39096 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40496 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59932 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39110 - "POST /tick HTTP/1.1" 200 OK
+node1-1  | [alpha=0.9] 0.559 -> 0.559
+node1-1  | INFO:     172.23.0.5:40508 - "POST /tick HTTP/1.1" 200 OK
+node2-1  | [alpha=0.5] 0.559 -> 0.559
+node2-1  | INFO:     172.23.0.5:59942 - "POST /tick HTTP/1.1" 200 OK
+node3-1  | [alpha=0.1] 0.559 -> 0.559
+node3-1  | INFO:     172.23.0.5:39122 - "POST /tick HTTP/1.1" 200 OK
+controller-1  | waiting for nodes...
+controller-1  | nodes ready
+controller-1 exited with code 0
+Aborting on container exit...
+ Container entropy01-controller-1  Stopping
+ Container entropy01-controller-1  Stopped
+
+
+ Container entropy01-node2-1  Stopping
+ Container entropy01-node3-1  Stopping
+ Container entropy01-node1-1  Stopping
+node3-1       | INFO:     Shutting down
+node2-1       | INFO:     Shutting down
+node1-1       | INFO:     Shutting down
+node3-1       | INFO:     Waiting for application shutdown.
+node3-1       | INFO:     Application shutdown complete.
+node3-1       | INFO:     Finished server process [1]
+node1-1       | INFO:     Waiting for application shutdown.
+node1-1       | INFO:     Application shutdown complete.
+node1-1       | INFO:     Finished server process [1]
+node2-1       | INFO:     Waiting for application shutdown.
+node2-1       | INFO:     Application shutdown complete.
+node2-1       | INFO:     Finished server process [1]
+ Container entropy01-node3-1  Stopped
+node3-1 exited with code 0
+ Container entropy01-node1-1  Stopped
+node1-1 exited with code 0
+ Container entropy01-node2-1  Stopped
+node2-1 exited with code 0
+== plot ==
+Collecting pandas
+  Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 3.6 MB/s eta 0:00:00
+Collecting matplotlib
+  Downloading matplotlib-3.10.8-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 kB 17.4 MB/s eta 0:00:00
+Collecting numpy>=1.23.2 (from pandas)
+  Downloading numpy-2.4.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.61.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 16.6 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.4.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+Collecting packaging>=20.0 (from matplotlib)
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pillow>=8 (from matplotlib)
+  Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (8.8 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Downloading pyparsing-3.3.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (12.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 78.6 MB/s eta 0:00:00
+Downloading matplotlib-3.10.8-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 80.0 MB/s eta 0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (329 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 329.2/329.2 kB 48.8 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.61.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 66.1 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.9-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 68.5 MB/s eta 0:00:00
+Downloading numpy-2.4.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (14.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 65.0 MB/s eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 27.0 MB/s eta 0:00:00
+Downloading pillow-12.1.0-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 80.1 MB/s eta 0:00:00
+Downloading pyparsing-3.3.1-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.8/121.8 kB 33.4 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 40.2 MB/s eta 0:00:00
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 61.0 MB/s eta 0:00:00
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.5/348.5 kB 46.1 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: pytz, tzdata, six, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, python-dateutil, contourpy, pandas, matplotlib
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.61.1 kiwisolver-1.4.9 matplotlib-3.10.8 numpy-2.4.0 packaging-25.0 pandas-2.3.3 pillow-12.1.0 pyparsing-3.3.1 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.3
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+DONE: analysis/beliefs.png generated

@@ -1,0 +1,4 @@
+name: expA
+graph: fixed
+projection: identity
+seed: 42

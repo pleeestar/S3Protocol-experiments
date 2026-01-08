@@ -1,0 +1,28 @@
+./02_projection/run-projection01.sh
+== initializing project ==
+== building docker image ==
+[+] Building 2.3s (10/10) FINISHED                                                                                                           docker:colima
+ => [internal] load build definition from Dockerfile                                                                                                  0.0s
+ => => transferring dockerfile: 201B                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim                                                                                   0.0s
+ => [internal] load .dockerignore                                                                                                                     0.0s
+ => => transferring context: 2B                                                                                                                       0.0s
+ => [1/5] FROM docker.io/library/python:3.11-slim@sha256:1dd3dca85e22886e44fcad1bb7ccab6691dfa83db52214cf9e20696e095f3e36                             0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:1dd3dca85e22886e44fcad1bb7ccab6691dfa83db52214cf9e20696e095f3e36                             0.0s
+ => [internal] load build context                                                                                                                     0.0s
+ => => transferring context: 2.25kB                                                                                                                   0.0s
+ => CACHED [2/5] WORKDIR /app                                                                                                                         0.0s
+ => CACHED [3/5] COPY requirements.txt .                                                                                                              0.0s
+ => CACHED [4/5] RUN pip install --no-cache-dir -r requirements.txt                                                                                   0.0s
+ => CACHED [5/5] COPY src ./src                                                                                                                       0.0s
+ => exporting to image                                                                                                                                2.2s
+ => => exporting layers                                                                                                                               0.0s
+ => => exporting manifest sha256:d32e8d56d52467fbd9609becb94459df94b95892412cde04b90eb3b9de828007                                                     0.0s
+ => => exporting config sha256:c2cc37ba04ccd5bb350f3a8d91e454fea23ce02a57465e707c3fcb7a69763c94                                                       0.0s
+ => => exporting attestation manifest sha256:49118a82c20e0ec13abe4efa66c7924734b2e318769ecfdf3e144e1a2f275311                                         0.0s
+ => => exporting manifest list sha256:0e98d3ad003cdcaf44ec3d99b10a6faa105c07db1974a44abeb9853dcec1a4d4                                                0.0s
+ => => naming to docker.io/library/belief-exp:latest                                                                                                  0.0s
+ => => unpacking to docker.io/library/belief-exp:latest                                                                                               2.2s
+== running experiment ==
+== done ==
+belief.csv		belief_pca.png		belief_umap.png		silhouette_time.csv	silhouette_time.png

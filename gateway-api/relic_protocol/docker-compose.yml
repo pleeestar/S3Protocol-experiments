@@ -1,0 +1,49 @@
+services:
+  gateway:
+    build: ./gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - NODES=node1,node2,node3,node4,node5
+    depends_on:
+      - node1
+
+  node1:
+    build: ./node
+    environment:
+      - NODE_ID=node1
+      - SEED=1
+      - PEERS=node2,node3,node4,node5
+    ports: ["8001:8000"]
+
+  node2:
+    build: ./node
+    environment:
+      - NODE_ID=node2
+      - SEED=2
+      - PEERS=node1,node3,node4,node5
+    ports: ["8002:8000"]
+
+  node3:
+    build: ./node
+    environment:
+      - NODE_ID=node3
+      - SEED=3
+      - PEERS=node1,node2,node4,node5
+    ports: ["8003:8000"]
+
+  node4:
+    build: ./node
+    environment:
+      - NODE_ID=node4
+      - SEED=4
+      - PEERS=node1,node2,node3,node5
+    ports: ["8004:8000"]
+
+  node5:
+    build: ./node
+    environment:
+      - NODE_ID=node5
+      - SEED=5
+      - PEERS=node1,node2,node3,node4
+    ports: ["8005:8000"]
