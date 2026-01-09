@@ -40,7 +40,7 @@
 
 単純な平均化プロトコル（Gossip）を用いた際、ノード間の個性がどのように変化するかを確認する。
 
-[平均化Gossipによる人格の死 実験結果と考察1](/experiments/result/entropy01,02.md)
+[平均化Gossipによる人格の死 実験結果と考察1](/report/entropy01,02.md)
 
 ### 3.2 実験2：解釈行列（人格）による射影の影響
 
@@ -48,9 +48,9 @@
 
 他者の発話を、自分自身の「解釈行列（Persona）」で射影してから取り込むモデルを検証する。
 
-[解釈行列（人格）による射影の影響 実験結果と考察1](/experiments/result/projection01.md)
+[解釈行列（人格）による射影の影響 実験結果と考察1](/report/projection01.md)
 
-[解釈行列（人格）による射影の影響 実験結果と考察2](/experiments/result/projection02.md)
+[解釈行列（人格）による射影の影響 実験結果と考察2](/report/projection02.md)
 
 ### 3.3 実験3：幾何学的制約（Functorial Gossip）と人格の保存
 
@@ -58,11 +58,11 @@
 
 人格を「保存されるべき構造」と定義し、非線形性や反発、選択的相互作用を導入したモデルを検証する。
 
-[幾何学的制約（Functorial Gossip）と人格の保存 実験結果と考察1](/experiments/result/geometry01.md)
+[幾何学的制約（Functorial Gossip）と人格の保存 実験結果と考察1](/report/geometry01.md)
 
-[幾何学的制約（Functorial Gossip）と人格の保存 実験結果と考察2](/experiments/result/geometry02.md)
+[幾何学的制約（Functorial Gossip）と人格の保存 実験結果と考察2](/report/geometry02.md)
 
-[幾何学的制約（Functorial Gossip）と人格の保存 実験結果と考察3](/experiments/result/geometry03.md)
+[幾何学的制約（Functorial Gossip）と人格の保存 実験結果と考察3](/report/geometry03.md)
 
 ---
 
